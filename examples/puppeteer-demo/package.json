@@ -2,25 +2,20 @@
   "name": "puppeteer-demo",
   "version": "1.0.0",
   "description": "puppeteer demo",
-  "author": "zhanghui451 <zhanghui451@hys-inc.cn>",
+  "author": "Evan <redwolf0302@gmail.com>",
   "homepage": "https://github.com/redwolf0302/testing-demo/tree/master/examples/puppeteer-demo#readme",
   "license": "MIT",
-  "main": "lib/puppeteer-demo.js",
-  "directories": {
-    "lib": "lib",
-    "test": "__tests__"
-  },
-  "files": [
-    "lib"
-  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/redwolf0302/testing-demo.git"
   },
   "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1"
+    "test": "node puppeteer.js"
   },
   "bugs": {
     "url": "https://github.com/redwolf0302/testing-demo/issues"
+  },
+  "dependencies": {
+    "puppeteer": "^1.6.2"
   }
 }
