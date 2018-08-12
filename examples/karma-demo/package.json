@@ -4,11 +4,18 @@
   "description": "Karma Demo",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"test\" && exit 0"
+    "test": "karma start karma.conf.js"
   },
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "karma": "^2.0.5"
+    "jasmine": "^3.2.0",
+    "jasmine-core": "^3.2.0",
+    "karma": "^2.0.5",
+    "karma-firefox-launcher": "^1.1.0"
+  },
+  "devDependencies": {
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-jasmine": "^1.1.2"
   }
 }

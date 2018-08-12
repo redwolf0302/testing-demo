@@ -1,0 +1,40 @@
+{
+  "name": "project-demo",
+  "version": "1.0.0",
+  "description": "a demo project with react, webpack, babel",
+  "author": "zhanghui451 <zhanghui451@hys-inc.cn>",
+  "homepage": "https://github.com/redwolf0302/testing-demo/tree/master/examples/project-demo#readme",
+  "license": "MIT",
+  "directories": {
+    "lib": "src"
+  },
+  "files": [
+    "src"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/redwolf0302/testing-demo.git"
+  },
+  "scripts": {
+    "start": "webpack-dev-server"
+  },
+  "bugs": {
+    "url": "https://github.com/redwolf0302/testing-demo/issues"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "css-loader": "^1.0.0",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "html-webpack-plugin": "^3.2.0",
+    "webpack": "^4.16.5",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "^3.1.5"
+  },
+  "dependencies": {
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2"
+  }
+}
