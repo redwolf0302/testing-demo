@@ -5,7 +5,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const sourcePath = path.resolve('./src');
 const distPath = path.resolve('./dist');
 const npmBase = path.resolve('./node_modules');
+
 const includedPackages = [].map((pkg) => path.join(npmBase, pkg));
+
 //Webpack configuration
 module.exports = {
     mode: 'development',
