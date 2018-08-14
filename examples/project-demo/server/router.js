@@ -11,7 +11,6 @@ router.use((req, res, next) => {
 
 router.get('/user/list', userList);
 router.get('/user/:userId', userInfo);
-router.get('/im/:userId/:pageNo', im);
-
+router.get('/im/:fromId/:toId', im);
 
 module.exports = router;
