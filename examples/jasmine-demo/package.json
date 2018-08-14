@@ -1,0 +1,24 @@
+{
+  "name": "jasmine-demo",
+  "version": "1.0.0",
+  "description": "jasmine demo",
+  "keywords": [
+    "jasmine"
+  ],
+  "author": "evan <redwolf0302@gmail.com>",
+  "homepage": "https://github.com/redwolf0302/testing-demo/tree/master/examples/jasmine-demo#readme",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/redwolf0302/testing-demo.git"
+  },
+  "scripts": {
+    "test": "jasmine"
+  },
+  "bugs": {
+    "url": "https://github.com/redwolf0302/testing-demo/issues"
+  },
+  "dependencies": {
+    "jasmine": "^3.2.0"
+  }
+}

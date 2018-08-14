@@ -1,15 +1,17 @@
 const router = require('express').Router({});
+const im = require('./api/im');
+const {userList, userInfo} = require('./api/user');
+
 
 router.use((req, res, next) => {
     console.log(`access ${req.url} at ${Date.now()}`);
     next();
 });
-router.get('/user/list', () => {
-});
-router.get('/user/:userId', () => {
-});
 
-router.get('/im/:userId/:pageNo', () => {
-});
+
+router.get('/user/list', userList);
+router.get('/user/:userId', userInfo);
+router.get('/im/:userId/:pageNo', im);
+
 
 module.exports = router;

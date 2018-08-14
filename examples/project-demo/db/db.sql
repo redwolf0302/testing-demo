@@ -1,0 +1,31 @@
+BEGIN TRANSACTION;
+CREATE TABLE IF NOT EXISTS `User` (
+	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+	`name`	TEXT NOT NULL UNIQUE,
+	`gender`	TEXT DEFAULT 'M',
+	`age`	INTEGER DEFAULT 0,
+	`avatar`	TEXT
+);
+CREATE TABLE IF NOT EXISTS `IM` (
+	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+	`from`	INTEGER NOT NULL,
+	`to`	INTEGER NOT NULL,
+	`type`	INTEGER DEFAULT 0,
+	`content`	TEXT,
+	`attachment`	BLOB,
+	FOREIGN KEY(`from`) REFERENCES `User`(`id`),
+	FOREIGN KEY(`to`) REFERENCES `User`(`id`)
+);
+CREATE INDEX IF NOT EXISTS `user_name_idx` ON `User` (
+	`name`	ASC
+);
+CREATE INDEX IF NOT EXISTS `im_type_idx` ON `IM` (
+	`type`	ASC
+);
+CREATE INDEX IF NOT EXISTS `im_to_idx` ON `IM` (
+	`to`	ASC
+);
+CREATE INDEX IF NOT EXISTS `im_from_idx` ON `IM` (
+	`from`	ASC
+);
+COMMIT;
