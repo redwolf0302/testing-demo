@@ -43,9 +43,9 @@ export default class User extends React.PureComponent {
     }
 
     _handleUserClicked(user) {
-        const {history} = this.props;
-        console.log(user);
-        history.push(`/user/${user.id}`);
+        const {match: {params: {userId}}, history} = this.props;
+        // history.push(`/user/${user.id}`);
+        history.push(`/im/chat/${userId}/${user.id}`);
     }
 
     render() {
