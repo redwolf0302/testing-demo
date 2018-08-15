@@ -6,7 +6,7 @@ export default class Card extends React.PureComponent {
     render() {
         return (
             <div className='box card'>
-                {this.props.children}
+                <div className='card-body'>{this.props.children}</div>
             </div>
         );
     }

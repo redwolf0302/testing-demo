@@ -6,6 +6,8 @@
     margin: 20px auto;
     padding: 4px;
     border-radius: 4px;
+    font-size: 14px;
+    color: #000000;
 }
 
 .card:before, .card:after {
@@ -26,4 +28,17 @@
     transform: rotate(3deg);
     right: 10px;
     left: auto;
+}
+
+.card .card-body {
+    display: flex;
+    padding: 14px;
+}
+
+.card .card-body .icon {
+
+}
+
+.card .card-body .content {
+    padding: 0 10px;
 }

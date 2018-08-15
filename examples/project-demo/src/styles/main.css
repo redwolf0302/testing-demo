@@ -43,6 +43,7 @@ body {
     max-height: 850px;
     margin: 0 auto;
     background-color: #afafaf;
+    color: #000000;
     z-index: -100;
 }
 

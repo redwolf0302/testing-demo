@@ -73,7 +73,7 @@ export default class Avatar extends React.PureComponent {
 }
 
 Avatar.propTypes = {
-    imageUrl: PropTypes.string.isRequired,
+    imageUrl: PropTypes.string,
     width: PropTypes.number.isRequired,
     height: PropTypes.number.isRequired,
     defaultUrl: PropTypes.string,
