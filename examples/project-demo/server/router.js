@@ -1,5 +1,5 @@
 const router = require('express').Router({});
-const im = require('./api/im');
+const {messages, friends} = require('./api/im');
 const {userList, userInfo} = require('./api/user');
 
 
@@ -11,6 +11,7 @@ router.use((req, res, next) => {
 
 router.get('/user/list', userList);
 router.get('/user/:userId', userInfo);
-router.get('/im/:fromId/:toId', im);
+router.get('/im/messages/:fromId/:toId', messages);
+router.get('/im/friends/:userId', friends);
 
 module.exports = router;

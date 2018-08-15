@@ -5,9 +5,7 @@
 
 body {
     font-size: 14px;
-    font-family: ".SF NS Text";
-}
-
-h1 {
-    font-size: 12px;
+    font-family: "Helvetica Neue", "Roboto", "Segoe UI", sans-serif;
+    background-color: #fff;
+    color: #000;
 }
