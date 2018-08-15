@@ -1,59 +1,61 @@
 import React, {Fragment} from 'react';
-import {Link} from 'react-router-dom';
 import ApiService from "utils/ApiService";
-import Avatar from "components/Avatar/Avatar";
-import Card from "components/Card/Card";
+import UserCard from "./components/UserCard/UserCard";
 
 
 export default class User extends React.PureComponent {
     constructor(props, context) {
         super(props, context);
         this.state = {
-            user: {}
-        }
+            user: {},
+            friends: []
+        };
+        this._handleUserClicked = this._handleUserClicked.bind(this);
     }
 
     doLoadUser(userId) {
         ApiService(`user/${userId}`)
             .then(({data: user}) => {
                 this.setState({user});
-            })
+            });
     }
+
+    doLoadFriends(userId) {
+        ApiService(`im/friends/${userId}`)
+            .then(({data: friends}) => {
+                this.setState({friends});
+            });
+    }
+
 
     componentWillMount() {
         const {match: {params: {userId}}} = this.props;
-        this.doLoadUser(userId)
+        this.doLoadUser(userId);
+        this.doLoadFriends(userId);
     }
 
-    //
-    // componentWillUpdate() {
-    //     const {match: {params: {userId}}} = this.props;
-    //     this.doLoadUser(userId)
-    // }
+    componentWillReceiveProps(nextProps) {
+        if (nextProps.location !== this.props.location) {
+            const {match: {params: {userId}}} = nextProps;
+            this.doLoadUser(userId);
+            this.doLoadFriends(userId);
+        }
+    }
+
+    _handleUserClicked(user) {
+        const {history} = this.props;
+        console.log(user);
+        history.push(`/user/${user.id}`);
+    }
 
     render() {
-        const {user} = this.state;
+        const {user, friends} = this.state;
         return (
             <Fragment>
-                <Card>
-                    <Fragment>
-                        <Avatar imageUrl={user.avatar}
-                                width={64}
-                                height={64}
-                                cls={'icon'}
-                                defaultUrl={require('images/user-default.png')}/>
-                        <div className='content'>
-                            <h3>{user.name}</h3>
-                            <p>{user.gender==='M'?'男':'女'} {user.age}岁</p>
-                            <p>简介：{user.description}</p>
-                        </div>
-                    </Fragment>
-                </Card>
-                <Link className='btn' to={'/im/friends/123'}>Friend#123</Link>
-                <Link className='btn' to={'/im/chat/123/123'}>Chat#123#123</Link>
-                <div className="box effect2">
-                    <h3>Effect 2</h3>
-                </div>
+                <UserCard user={user} key={user.id}/>
+                <h3># 朋友们</h3>
+                {friends.map(friend => <UserCard user={friend} key={friend.id}
+                                                 onUserCardClick={this._handleUserClicked}/>)}
             </Fragment>
         );
     }

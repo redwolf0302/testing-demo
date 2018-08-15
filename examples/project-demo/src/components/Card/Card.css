@@ -9,6 +9,9 @@
     font-size: 14px;
     color: #000000;
 }
+.card.can-click{
+    cursor: pointer;
+}
 
 .card:before, .card:after {
     z-index: -1;
