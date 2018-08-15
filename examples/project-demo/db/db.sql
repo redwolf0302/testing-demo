@@ -10,7 +10,7 @@
  Target Server Version : 3008008
  File Encoding         : utf-8
 
- Date: 08/14/2018 23:02:12 PM
+ Date: 08/15/2018 11:36:40 AM
 */
 
 PRAGMA foreign_keys = false;
@@ -27,15 +27,17 @@ CREATE TABLE "IM" (
 	 "content" TEXT,
 	 "attachment" text
 );
-INSERT INTO "main".sqlite_sequence (name, seq) VALUES ("IM", '3');
+INSERT INTO "main".sqlite_sequence (name, seq) VALUES ("IM", '5');
 
 -- ----------------------------
 --  Records of IM
 -- ----------------------------
 BEGIN;
 INSERT INTO "IM" VALUES (1, 1, 2, 1, '你好吗？在不？', null);
-INSERT INTO "IM" VALUES (2, 2, 1, 1, '我在的', null);
+INSERT INTO "IM" VALUES (2, 2, 1, 1, '我在的', '');
 INSERT INTO "IM" VALUES (3, 1, 2, 2, '', 'https://static.jk.cn/T18.YTByhT1RCvBVdK.jpg');
+INSERT INTO "IM" VALUES (4, 1, 3, 1, '你咋不开心？', null);
+INSERT INTO "IM" VALUES (5, 3, 1, 1, '暑假作业被台风吹走了！', null);
 COMMIT;
 
 -- ----------------------------
