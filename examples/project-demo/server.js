@@ -10,6 +10,6 @@ const app = express();
 app.use('/api', router);
 app.use(webpackDevMiddleware(webpackCompiler, {}));
 
-app.listen(8080, () => {
+app.listen(8080, () => {-
     console.log('started http://localhost:8080');
 });

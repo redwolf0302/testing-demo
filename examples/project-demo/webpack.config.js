@@ -15,7 +15,7 @@ const includedPackages = [].map((pkg) => path.join(npmBase, pkg));
 module.exports = {
     mode: 'development',
     entry: {
-        app: 'index.jsx'
+        app: 'index.js'
     },
     output: {
         path: distPath,
@@ -51,6 +51,14 @@ module.exports = {
                     [sourcePath]
                 ),
                 use: ['babel-loader']
+            },
+            {
+                test: /\.(png|jpg|gif|mp4|ogg|svg|woff|woff2)$/,
+                loader: 'url-loader',
+                query: {
+                    limit: '1024',
+                    name: 'images/[name].[hash:16].[ext]'
+                }
             }
         ]
     },
