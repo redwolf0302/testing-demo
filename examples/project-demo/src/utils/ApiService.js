@@ -1,6 +1,6 @@
 import axios from 'axios';
 
 
-function ApiService(params, options) {
-
+export default function ApiService(url) {
+    return axios(`http://localhost:8080/api/${url}`);
 }

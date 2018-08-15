@@ -1,0 +1,29 @@
+.card {
+    position: relative;
+    width: 90%;
+    min-height: 150px;
+    background: #FFF;
+    margin: 20px auto;
+    padding: 4px;
+    border-radius: 4px;
+}
+
+.card:before, .card:after {
+    z-index: -1;
+    position: absolute;
+    content: "";
+    bottom: 10px;
+    left: 10px;
+    width: 50%;
+    top: 80%;
+    max-width: 300px;
+    background: #777;
+    box-shadow: 0 15px 10px #777;
+    transform: rotate(-3deg);
+}
+
+.card:after {
+    transform: rotate(3deg);
+    right: 10px;
+    left: auto;
+}
