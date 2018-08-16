@@ -298,3 +298,4 @@ local.properties
 .scala_dependencies
 .worksheet
 
+examples/*/dist/

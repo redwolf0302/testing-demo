@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "lerna bootstrap",
-    "clean": "rm -rf examples/*/node_modules"
+    "clean": "lerna clean"
   },
   "repository": {
     "type": "git",

@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Avatar Correctly Avatar snapshot 1`] = `
+<div
+  className="es-avatar"
+  onClick={[Function]}
+  style={
+    Object {
+      "height": 30,
+      "minHeight": 30,
+      "minWidth": 30,
+      "width": 30,
+    }
+  }
+>
+  <img
+    className="es-avatar-img"
+    onError={[Function]}
+    onLoad={[Function]}
+  />
+</div>
+`;
+
+exports[`Avatar Correctly Avatar snapshot that has class name 'test' 1`] = `
+<div
+  className="es-avatar test"
+  onClick={[Function]}
+  style={
+    Object {
+      "height": 30,
+      "minHeight": 30,
+      "minWidth": 30,
+      "width": 30,
+    }
+  }
+>
+  <img
+    className="es-avatar-img"
+    onError={[Function]}
+    onLoad={[Function]}
+  />
+</div>
+`;
+exports[`Avatar Correctly Avatar snapshot with imageUrl 1`] = `
+<div
+  className="es-avatar"
+  onClick={[Function]}
+  style={
+    Object {
+      "height": 30,
+      "minHeight": 30,
+      "minWidth": 30,
+      "width": 30,
+    }
+  }
+>
+  <img
+    className="es-avatar-img"
+    onError={[Function]}
+    onLoad={[Function]}
+    src="https://static.jk.cn/XXX.jpg"
+  />
+</div>
+`;

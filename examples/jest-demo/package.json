@@ -4,14 +4,34 @@
   "description": "Jest Demo",
   "main": "index.js",
   "scripts": {
-    "test": "jest __tests__/*.js"
+    "copy": "rm -rf dist && mkdir dist && cp -R ../project-demo/src dist/src && cp -R ../project-demo/db dist/db && cp -R ../project-demo/server dist/server",
+    "test": "npm run copy && jest --coverage"
   },
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "jest": "^23.4.2"
+    "babel-core": "^6.26.3",
+    "babel-jest": "^23.4.2",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "jest": "^23.4.2",
+    "react-test-renderer": "^16.4.2",
+    "regenerator-runtime": "^0.12.1"
   },
   "jest": {
-    "testEnvironment": "node"
+    "testEnvironment": "node",
+    "moduleDirectories": [
+      "<rootDir>/dist/src/",
+      "<rootDir>/../project-demo/node_modules",
+      "node_modules"
+    ],
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(css|less)$": "<rootDir>/__mocks__/styleMock.js"
+    },
+    "modulePathIgnorePatterns": [
+      "<rootDir>/dist/src/images/",
+      "<rootDir>/dist/src/styles/"
+    ]
   }
 }
