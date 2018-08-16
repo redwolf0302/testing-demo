@@ -4,7 +4,7 @@
   "description": "Jest Demo",
   "main": "index.js",
   "scripts": {
-    "copy": "rm -rf dist && mkdir dist && cp -R ../project-demo/src dist/src && cp -R ../project-demo/db dist/db && cp -R ../project-demo/server dist/server",
+    "copy": "rm -rf dist && mkdir dist && cp -R ../project-demo/src dist/src && cp -R ../project-demo/server dist/server",
     "test": "npm run copy && jest --coverage"
   },
   "author": "",
