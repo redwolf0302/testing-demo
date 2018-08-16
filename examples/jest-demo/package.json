@@ -10,6 +10,8 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "axios": "^0.18.0",
+    "axios-mock-adapter": "^1.15.0",
     "babel-core": "^6.26.3",
     "babel-jest": "^23.4.2",
     "babel-preset-env": "^1.7.0",
@@ -18,6 +20,7 @@
     "enzyme-adapter-react-16": "^1.2.0",
     "enzyme-to-json": "^3.3.4",
     "jest": "^23.4.2",
+    "jest-mock-axios": "^2.1.11",
     "react-test-renderer": "^16.4.2",
     "regenerator-runtime": "^0.12.1"
   }

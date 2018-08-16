@@ -4,7 +4,6 @@ const messages = (req, res) => {
 };
 
 const friends = (req, res) => {
-    console.log(req.body);
     res.send(getFriends(req.params.userId));
 };
 
