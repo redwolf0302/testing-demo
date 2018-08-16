@@ -43,28 +43,6 @@ exports[`Avatar Correctly Avatar snapshot simulate error event without defaultUr
 </div>
 `;
 
-exports[`Avatar Correctly Avatar snapshot simulate error event without defaultUrl 2`] = `
-<div
-  className="es-avatar cursor-pointer"
-  onClick={[Function]}
-  style={
-    Object {
-      "height": 30,
-      "minHeight": 30,
-      "minWidth": 30,
-      "width": 30,
-    }
-  }
->
-  <img
-    className="es-avatar-img"
-    onError={[Function]}
-    onLoad={[Function]}
-    src="https://static.jk.cn/XXX.jpg"
-  />
-</div>
-`;
-
 exports[`Avatar Correctly Avatar snapshot simulate event click without onClick 1`] = `
 <div
   className="es-avatar"
@@ -152,7 +130,7 @@ exports[`Avatar Correctly Avatar snapshot that has class name 'test' 1`] = `
 </div>
 `;
 
-exports[`Avatar Correctly Avatar snapshot with defaultUrl 1`] = `
+exports[`Avatar Correctly Avatar snapshot simulate event error with defaultUrl 1`] = `
 <div
   className="es-avatar"
   onClick={[Function]}
