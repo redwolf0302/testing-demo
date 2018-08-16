@@ -14,14 +14,14 @@ export default class User extends React.PureComponent {
     }
 
     doLoadUser(userId) {
-        ApiService(`user/${userId}`)
+        ApiService(`/user/${userId}`)
             .then(({data: user}) => {
                 this.setState({user});
             });
     }
 
     doLoadFriends(userId) {
-        ApiService(`im/friends/${userId}`)
+        ApiService(`/im/friends/${userId}`)
             .then(({data: friends}) => {
                 this.setState({friends});
             });
