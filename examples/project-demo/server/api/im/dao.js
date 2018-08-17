@@ -5,7 +5,7 @@ const database = new Database(DATABASE_PATH);
 
 function getMessages(fromId, toId) {
     return database
-        .prepare('select * from `IM` where (`from`=:fromId and `to`=:toId) or (`to`=:fromId and `from`=:toId)')
+        .prepare('select * from `User` where (`from`=:fromId and `to`=:toId) or (`to`=:fromId and `from`=:toId)')
         .all({
             fromId,
             toId
@@ -14,7 +14,7 @@ function getMessages(fromId, toId) {
 
 function getFriends(userId) {
     let toIds = database
-        .prepare('select DISTINCT `to` from `IM` where `from`=:userId')
+        .prepare('select DISTINCT `to` from `User` where `from`=:userId')
         .all({userId});
     return database
         .prepare(`select DISTINCT * from \`User\` where id in (${toIds.map(id => id.to).join(',')})`)
