@@ -10,6 +10,7 @@ describe('Avatar Correctly', () => {
     });
     test('Avatar snapshot that has class name \'test\'', () => {
         const tree = renderer.create(<Avatar width={30} height={30} cls={'test'}/>).toJSON();
+        expect(tree).toBeNull();
         expect(tree).toMatchSnapshot();
     });
     test('Avatar snapshot with imageUrl', () => {

@@ -1,6 +1,9 @@
 describe("MyTest", function () {
     beforeAll(function () {
         console.log('beforeAll level1');
+        var xhr = new window.XMLHttpRequest();
+        console.log(xhr);
+        console.log(2);
     });
     beforeEach(function () {
         console.log("beforeEach level1");

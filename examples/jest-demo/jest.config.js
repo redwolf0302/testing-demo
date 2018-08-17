@@ -9,8 +9,9 @@ module.exports = {
     "testEnvironment": "node",
     "moduleDirectories": [
         "<rootDir>/dist/src/",
+        "<rootDir>/dist/server/",
         "<rootDir>/../project-demo/node_modules",
-        "node_modules"
+        "<rootDir>/node_modules"
     ],
     "moduleNameMapper": {
         "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
@@ -21,6 +22,7 @@ module.exports = {
         "<rootDir>/dist/src/styles/"
     ],
     "collectCoverageFrom":[
-        "dist/**/*.{js,jsx}"
+        "dist/**/*.{js,jsx}",
+        "src/**/*.{js,jsx}"
     ]
 };

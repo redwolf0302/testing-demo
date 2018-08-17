@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`user dao correctly user list 1`] = `
+Array [
+  Object {
+    "age": 30,
+    "avatar": "https://static.jk.cn/T1UoYTByhT1RCvBVdK.jpg",
+    "description": "Description",
+    "gender": "M",
+    "id": 1,
+    "name": "Evan",
+  },
+]
+`;

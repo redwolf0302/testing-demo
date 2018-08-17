@@ -11,7 +11,13 @@ describe('ApiService correctly', () => {
         let catchFn = jest.fn(), thenFn = jest.fn();
         ApiService('/user/list').then(thenFn).catch(catchFn);
         mockAxios.mockResponse({data: [{id: 1, name: 'Evan'}]});
-        expect(thenFn).toHaveBeenCalledWith({"config": {}, "data": [{"id": 1, "name": "Evan"}], "headers": {}, "status": 200, "statusText": "OK"});
+        expect(thenFn).toHaveBeenCalledWith({
+            "config": {},
+            "data": [{"id": 1, "name": "Evan"}],
+            "headers": {},
+            "status": 200,
+            "statusText": "OK"
+        });
         expect(catchFn).not.toHaveBeenCalled();
     });
 
