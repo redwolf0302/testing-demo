@@ -1,11 +1,8 @@
 # `project-demo`
 
-> TODO: description
-
-## Usage
-
+运行演示项目
+```shell
+yarn
+yarn start
 ```
-const projectDemo = require('project-demo');
-
-// TODO: DEMONSTRATE API
-```
+在浏览器中访问`http://localhost:8080`

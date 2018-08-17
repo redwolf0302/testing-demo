@@ -4,7 +4,7 @@
   "description": "Compare some testing frameworks.",
   "main": "index.js",
   "scripts": {
-    "test": "lerna bootstrap",
+    "bootstrap": "lerna bootstrap",
     "clean": "lerna clean"
   },
   "repository": {
