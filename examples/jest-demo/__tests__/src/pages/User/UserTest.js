@@ -25,7 +25,8 @@ describe('Chat correctly', () => {
                     "content": "",
                     "attachment": "https://static.jk.cn/T18.YTByhT1RCvBVdK.jpg"
                 },
-                {"id": 2, "from": 2, "to": 1, "type": 1, "content": "我在的", "attachment": ""}]
-        }).find('MessageItem').length).toEqual(3);
+                {"id": 2, "from": 2, "to": 1, "type": 1, "content": "我在的", "attachment": ""},
+                {"id": 5, "from": 2, "to": 1, "type": 1, "content": "我在的", "attachment": ""}]
+        }).find('MessageItem').length).toEqual(4);
     });
 });

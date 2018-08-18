@@ -45,7 +45,7 @@ exports[`Avatar Correctly Avatar snapshot simulate error event without defaultUr
 
 exports[`Avatar Correctly Avatar snapshot simulate event click without onClick 1`] = `
 <div
-  className="es-avatar"
+  className="es-avatar cursor-pointer"
   onClick={[Function]}
   style={
     Object {

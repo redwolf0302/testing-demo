@@ -29,4 +29,13 @@ describe('ApiService correctly', () => {
         expect(thenFn).not.toHaveBeenCalled();
         expect(catchFn).toHaveBeenCalledWith({});
     });
+
+    it('ApiService request error with post', () => {
+        let catchFn = jest.fn(), thenFn = jest.fn();
+        ApiService('/user/list', null, {method:'post'}).then(thenFn).catch(catchFn);
+        mockAxios.mockError(new Error('Network Error'));
+        console.log(mockAxios.lastReqGet());
+        expect(thenFn).not.toHaveBeenCalled();
+        expect(catchFn).toHaveBeenCalledWith({});
+    });
 });
