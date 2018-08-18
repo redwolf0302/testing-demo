@@ -14,7 +14,7 @@ function getMessages(fromId, toId) {
 
 function getFriends(userId) {
     let toIds = database
-        .prepare('select DISTINCT `to` from `User` where `from`=:userId')
+        .prepare('select DISTINCT `to` from `IM` where `from`=:userId')
         .all({userId});
     return database
         .prepare(`select DISTINCT * from \`User\` where id in (${toIds.map(id => id.to).join(',')})`)

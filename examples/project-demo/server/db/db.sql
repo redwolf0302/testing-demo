@@ -10,7 +10,7 @@
  Target Server Version : 3008008
  File Encoding         : utf-8
 
- Date: 08/16/2018 00:04:32 AM
+ Date: 08/18/2018 15:59:22 PM
 */
 
 PRAGMA foreign_keys = false;
@@ -65,28 +65,6 @@ INSERT INTO "User" VALUES (2, '''睡神''许普诺斯宝宝', 'F', 20, 'https://
     用“永恒的睡眠”催眠了穿着了“仙女座神圣衣”的仙女座 瞬，与穿着了“天龙座神圣衣”和“天鹅座神圣衣”的天龙座 紫龙与天鹅座 冰河展开激烈交战，最后“永恒的睡眠”被看穿，被他们用“庐山昇龙霸”、“钻石星尘”合力击败。');
 INSERT INTO "User" VALUES (3, '''死神''塔纳托斯宝宝', 'M', 29, 'https://static.jk.cn/T19kYTByJT1RCvBVdK.jpg', '辅佐冥王 的双子神之一，司掌死亡的神，与睡眠之神 休普诺斯是双胞胎兄弟。眼睛和头发的颜色为银色，额头有实心的五角星，与休普诺斯相反，性格暴躁并极端蔑视人类，冷酷无情，不管敌人距离有多远，也可以随意杀人。
     轻松把星矢、紫龙、冰河、瞬、一辉五人秒杀，更把五件“黄金圣衣”完全粉碎，与穿着了“天马座神圣衣”的星矢展开激烈交战，最后被他以“天马流星拳”重创再使出“天马彗星拳”击败。');
-COMMIT;
-
--- ----------------------------
---  Table structure for _User_old_20180815
--- ----------------------------
-DROP TABLE IF EXISTS "_User_old_20180815";
-CREATE TABLE "_User_old_20180815" (
-	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
-	`name`	TEXT NOT NULL UNIQUE,
-	`gender`	TEXT DEFAULT 'M',
-	`age`	INTEGER DEFAULT 0,
-	`avatar`	TEXT
-);
-INSERT INTO "main".sqlite_sequence (name, seq) VALUES ("_User_old_20180815", '3');
-
--- ----------------------------
---  Records of _User_old_20180815
--- ----------------------------
-BEGIN;
-INSERT INTO "_User_old_20180815" VALUES (1, '宝宝1', 'M', 30, 'https://static.jk.cn/T1UoYTByhT1RCvBVdK.jpg');
-INSERT INTO "_User_old_20180815" VALUES (2, '宝宝2', 'F', 20, 'https://static.jk.cn/T125CTByJT1RCvBVdK.jpg');
-INSERT INTO "_User_old_20180815" VALUES (3, '宝宝3', 'M', 29, 'https://static.jk.cn/T125CTByJT1RCvBVdK.jpg');
 COMMIT;
 
 -- ----------------------------
